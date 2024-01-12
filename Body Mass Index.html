@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo-desa.png" alt="logo desa Rejo Mulyo">
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="container1">
+            <h1 class="judul1">Perhitungan Body Mass Index</h1>
+        </div>
+</header>
+<body>
+    
+    <h1>Kalkulator BMI</h1>
+
+    <label for="weight">Berat Badan (kg):</label>
+    <input type="number" id="weight" placeholder="Masukkan berat badan" required><br>
+
+    <label for="height">Tinggi Badan (cm):</label>
+    <input type="number" id="height" placeholder="Masukkan tinggi badan" required><br>
+
+    <button onclick="calculateBMI()">Hitung BMI</button>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateBMI() {
+            // Mengambil nilai berat badan dan tinggi badan dari input
+            var weight = document.getElementById('weight').value;
+            var height = document.getElementById('height').value;
+
+            // Menghitung BMI
+            var bmi = weight / ((height / 100) * (height / 100));
+
+            // Menampilkan hasil BMI
+            var resultElement = document.getElementById('result');
+            resultElement.innerHTML = 'BMI Anda: ' + bmi.toFixed(2);
+
+            // Memberikan kategori berdasarkan nilai BMI
+            if (bmi < 18.5) {
+                resultElement.innerHTML += ' (Berat badan kurang)';
+            } else if (bmi >= 18.5 && bmi < 25) {
+                resultElement.innerHTML += ' (Berat badan normal)';
+            } else if (bmi >= 25 && bmi < 30) {
+                resultElement.innerHTML += ' (Berat badan berlebih)';
+            } else {
+                resultElement.innerHTML += ' (Obesitas)';
+            }
+        }
+    </script>
+
+</body>
+<footer>
+    <p>Kelompok KKN 201 ITERA © 2024</p>
+    <hr>
+</footer>
+</html>

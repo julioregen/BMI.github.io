@@ -1,0 +1,51 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.nav-menu {
+    list-style-type: none; 
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    color: #fff; 
+    padding: 15px; 
+    display: inline-block;
+}
+a:hover {
+    background-color: #555; 
+    border: 1px solid white;
+    transition: 0.5s;
+}
+.navbar {
+    background : url('meteran.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 10px;
+    justify-content: space-between; 
+    align-items: center; 
+}
+.logo{
+    max-width: 100px;
+}
+.logo img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+th {
+    background-color: #0db735; 
+    color: #fff; 
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #3498db; 
+}
+td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd; 
+}
